@@ -1,0 +1,110 @@
+:root{
+    --purpura-oscuro: #776BCC;
+    --purpura-claro: #C7C5F4;
+    --purpura-oscuro-2:#4C489D;
+    --purpura-claro-2:#7C78B8;
+    --purpura-oscuro-2:#5D54A4;
+    --purpura-oscuro-3:#6C63AC;
+    --purpura-claro-3:#6A679E;
+    --purpura-claro-4:#7E7BB9;
+    --purpura-oscuro-4:#5C5696;
+    --purpura-claro-5:#7875B5;
+    --azul-celeste: #8AFFE6;
+    --azul-oscuro: #1B3F4B;
+    --azul-oscuro-intermedio: #3b5d68;
+    --azul-profundo:#0164f8;
+    --azul-profundo-oscuro:#0453c9;
+    --gris-claro: #CBCBCB;
+    --gris-oscuro:#6b6868;
+    --gris-oscuro-medio:#bbb8b8;
+    --azul-claro: #4E8AC4;
+    --azul-claro-intermedio: #6cb5fa;
+    --negro: #000000;
+    --blanco: #fff;
+    --verde: #017e0c;
+    --verde-claro:#03b912;
+    --naranja:#f86605;
+    --naranja-claro:#c25106;
+    --rojo:#f70511;
+    --rojo-claro:#c5060f;
+  }
+
+.perfilImg{
+    border-radius: 50%;
+    height: 78px;
+    width: 75px;
+    box-shadow: 0 0 5px var(--azul-profundo);
+}
+
+.imageContainer {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    padding: 1px;
+    transform: rotate(3deg); 
+    border-radius: 20px; 
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px var(--azul-profundo);
+    background-image: linear-gradient(to right, rgba(255, 255, 0, 0.05), rgba(255, 255, 0, 0.05));
+    @media (min-width: 768px) { /* md: */
+      order: 2;
+      padding: 2px;
+      width: 256px; 
+      aspect-ratio: 1/1;
+    }
+  }
+  .imageContainer:hover{
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Para el dark mode, necesitarás una solución específica de tu framework*/
+  .imageContainer.dark-mode {  
+    background-color: var(--purpura-claro-2); 
+  }
+
+  .techStackSection {
+    padding: 4rem 0; /* py-12 (aproximación) */
+  }
+  
+  .techStackTitle {
+    font-size: 1.5rem; /* text-2xl (aproximación) */
+    font-weight: bold;
+    margin-bottom: 1.5rem; /* mb-6 (aproximación) */
+  }
+  
+  .techLogosGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* grid-cols-2 */
+    gap: 1rem; /* gap-4 (aproximación) */
+  
+    @media (min-width: 640px) { /* sm: */
+      grid-template-columns: repeat(3, 1fr); /* sm:grid-cols-3 */
+    }
+    @media (min-width: 768px) { /* md: */
+      grid-template-columns: repeat(4, 1fr); /* md:grid-cols-4 */
+    }
+    @media (min-width: 1024px) { /* lg: */
+      grid-template-columns: repeat(5, 1fr); /* lg:grid-cols-5 */
+    }
+    @media (min-width: 1280px) { /* xl: */
+      grid-template-columns: repeat(6, 1fr); /* xl:grid-cols-6 */
+    }
+  }
+  
+  .techCard {
+    border: 1px solid #d1d5db; /* light mode border */
+    background-color: #f3f4f6; /* light mode bg */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    &:hover{
+      background-color: #e5e7eb;
+    }
+    &.dark-mode {
+      border-color: #374151; /* dark mode border */
+      background-color: #1e293b; /* dark mode bg */
+      color: white;
+      &:hover{
+        background-color: #111827;
+      }
+    }
+  }
