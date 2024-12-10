@@ -1,9 +1,16 @@
 ---
 import GitHub from "./icons/GitHub.astro"
+import GitHub2 from "./icons/Github2.astro"
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import React from "./icons/React.astro"
+import Express from "./icons/Express.astro"
+import Firestore from "./icons/Firebase.astro"
+import Html from "./icons/Html.astro"
+import Javascript from "./icons/Javascript.astro"
+import Python from "./icons/Python.astro"
 
 const TAGS = {
   NEXT: {
@@ -15,6 +22,36 @@ const TAGS = {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#003159] text-white",
+    icon: React,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-black text-white",
+    icon: Express,
+  },
+  FIREBASE: {
+    name: "Firestore",
+    class: "bg-black text-white",
+    icon: Firestore,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white",
+    icon: Html,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: Javascript,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-black text-white",
+    icon: Python,
   },
 }
 const PROJECTS = [
@@ -35,12 +72,40 @@ const PROJECTS = [
     image: "/projects/adventjs.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
+  {
+    title: "Asistify",
+    description:
+      "El Panel de Control de Asistencia de Empleados es una aplicación que permite al Administrador gestionar y monitorear la asistencia de los empleados de manera eficiente. La aplicación está diseñada para centralizar el registro de asistencia, ausencias y tardanzas, y facilitar la generación de reportes detallados sobre la asistencia de los empleados.",
+    link: "https://svgl.vercel.app/",
+    github2: "#",
+    github: "https://github.com/dannyedison75/Asistify.git",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.EXPRESS, TAGS.REACT,TAGS.FIREBASE],
+  },
+  {
+    title: "EyA Sports",
+    description:
+      "Sitio web para consultar resultados de partidos de futbol y ver partidos",
+    link: "https://eyasoccer.netlify.app/",
+    github: "https://github.com/xeduark/EyA_SAS.git",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "App Streamlit",
+    description:
+      "Sitio web para gestionar y crear datos de empleados, consultar el nivel de estres dependiendo del modo de trabajo, consulta a los niveles de urto en el area metropolita, todas estos aplicativos generan graficos con pandas, ademas app usando la api de Gemini para comentar codigo y un generador de itinerario de viaje",
+    link: "https://nt-panelcontrolasistencia-b9quzcpwvkqn4airqprcsl.streamlit.app/Proyecto_Integrador",
+    github: "https://github.com/dannyedison75/NT-PanelControlAsistencia.git",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.FIREBASE, TAGS.PYTHON],
+  },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, github2 }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -68,10 +133,17 @@ const PROJECTS = [
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
+        {github2 && (
+          <LinkButton href={github2}>
+            <GitHub2 class="size-6" />
+            Back-End
+            
+          </LinkButton>
+        )}
           {github && (
             <LinkButton href={github}>
               <GitHub class="size-6" />
-              Code
+              Front-End
               
             </LinkButton>
           )}
