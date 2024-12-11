@@ -1,99 +1,138 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Firebase from "./icons/Firebase.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
-
-const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-  FIREBASE: {
-    name: "Firebase",
-    class: "bg-[#003159] text-white",
-    icon: Firebase,
-  },
-}
-const PROJECTS = [
-  {
-    title: "SVGL - A beautiful library with SVG logos",
-    description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.FIREBASE],
-  },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-]
+// components/TechStack.astro
+const certifications = [
+    {
+        id: 1,
+        src: "/projects/diploma-bd.jpg",
+        alt: "Certificación 1",
+    },
+    {
+        id: 2,
+        src: "/projects/diploma-diseno-programadores.jpg",
+        alt: "Certificación 2",
+    },
+    {
+        id: 3,
+        src: "/projects/diploma-dom.jpg",
+        alt: "Certificación 3",
+    },
+     {
+        id: 4,
+        src: "/projects/diploma-html-css.jpg",
+        alt: "Certificación 4",
+    },
+      {
+        id: 5,
+        src: "/projects/diploma-java-oop.jpg",
+        alt: "Certificación 5",
+    },
+];
 ---
 
-<div class="flex flex-col gap-y-16">
-  {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
+<div class="relative overflow-hidden">
+    
+  <div class="flex transition-transform duration-500 ease-in-out" id="slider-container">
+    {certifications.map((cert, index) => (
+      <img src={cert.src} alt={cert.alt} class="w-[28%] mx-6 flex-shrink-0 object-cover rounded-md cursor-pointer cert-image" data-src={cert.src} style="aspect-ratio: 4/3;" />
+    ))}
   </div>
-
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
+  <div class="absolute top-1/2 -translate-y-1/2 w-full justify-between flex">
+    <button class="p-2 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300" aria-label="Previous" id="prev-btn">
+      ‹
+    </button>
+    <button class="p-2 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300" aria-label="Next" id="next-btn">
+      ›
+    </button>
   </div>
-</article>
-    ))
-  }
+</div>
+
+<!-- Modal -->
+<div id="imageModal" class="fixed hidden z-50 inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg p-4 max-w-4xl">
+        <button id="closeModalBtn" class="float-right text-gray-600 hover:text-gray-800 text-xl">x</button>
+        <img src="" alt="" id="modalImage" class="max-w-full max-h-[80vh] mx-auto">
+    </div>
 </div>
 
 
+<script>
+  let slideIndex = 0;
+  const itemsVisible = 3;
+  let slider = document.getElementById('slider-container');
+  let items = slider?.querySelectorAll('img');
+  const totalItems = items?.length || 0;
 
+    function nextSlide() {
+      if(!items) return;
+      slideIndex += itemsVisible;
+      if (slideIndex > totalItems - itemsVisible) {
+        slideIndex = 0;
+      }
+      if(slider) {
+         slider.style.transform = `translateX(-${slideIndex * (28 + 4)}%)`;
+      }
+    }
+
+    function previousSlide() {
+      if(!items) return;
+      slideIndex -= itemsVisible;
+        if (slideIndex < 0) {
+          slideIndex = totalItems - itemsVisible;
+        }
+        if(slider) {
+           slider.style.transform = `translateX(-${slideIndex * (28 + 4)}%)`;
+        }
+    }
+
+    
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    
+    if(nextBtn) {
+          nextBtn.addEventListener('click', nextSlide);
+        }
+    
+    if(prevBtn) {
+        prevBtn.addEventListener('click', previousSlide);
+    }
+
+
+    // Automatic Slide
+    setInterval(nextSlide, 3000);
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage') as HTMLImageElement | null;
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const images = document.querySelectorAll<HTMLImageElement>('.cert-image');
+
+    if (!modal || !modalImage || !closeModalBtn) {
+        console.error('Modal elements are not found in the DOM');
+        return;
+    }
+
+    images.forEach(image => {
+        if (!image.dataset.src) {
+            console.warn('Image does not have a data-src attribute', image);
+            return;
+        }
+
+        image.addEventListener('click', () => {
+            modalImage.src = image.dataset.src!;
+            modal.classList.remove('hidden');
+        });
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+});
+
+</script>
