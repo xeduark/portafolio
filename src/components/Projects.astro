@@ -15,7 +15,7 @@ import Sql from "./icons/Sql.astro";
 import Php from "./icons/Php.astro";
 import Css from "./icons/Css.astro";
 import Java from "./icons/Java.astro";
-import Bootstrap from "./icons/Bosstrap.astro"
+import Bootstrap from "./icons/Bosstrap.astro";
 
 const TAGS = {
   NEXT: {
@@ -78,13 +78,21 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Css,
   },
-    JAVA: {
+  JAVA: {
     name: "Java",
     class: "bg-[#003159] text-white",
     icon: Java,
   },
 };
 const PROJECTS = [
+  {
+    title: "LANDING PAGE - Juan de Leon",
+    description:
+      "Un trabajo sencillo en un sistema CMS (MgPanel) para un cliente que necesitaba una landing page para su negocio.",
+    link: "https://juan-de-leon.mgpanel.org/",
+    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/juan.png?alt=media&token=3906aff0-b716-4479-91aa-85640a226d34",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+  },
   {
     title: "SVGL - A beautiful library with SVG logos",
     description:
@@ -101,7 +109,8 @@ const PROJECTS = [
     link: "https://svgl.vercel.app/",
     github2: "https://github.com/xeduark/backendAsistify",
     github: "https://github.com/xeduark/AppAsistify",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/homeAsistify.png?alt=media&token=0cad1b7d-52f3-47d8-a002-b378784d775a",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/homeAsistify.png?alt=media&token=0cad1b7d-52f3-47d8-a002-b378784d775a",
     tags: [TAGS.EXPRESS, TAGS.REACT, TAGS.FIREBASE, TAGS.BOOTSTRAP],
   },
   {
@@ -110,7 +119,8 @@ const PROJECTS = [
       "Sitio web para consultar resultados de partidos de fútbol y ver partidos.",
     link: "https://eyasoccer.netlify.app/",
     github: "https://github.com/xeduark/EyA_SAS.git",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/eyaLogin.png?alt=media&token=b98ba274-726f-4cd7-bf0e-a21ae4086d3a",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/eyaLogin.png?alt=media&token=b98ba274-726f-4cd7-bf0e-a21ae4086d3a",
     tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT],
   },
   {
@@ -119,7 +129,8 @@ const PROJECTS = [
       "Sitio web para gestionar y crear datos de empleados, consultar el nivel de estrés dependiendo del modo de trabajo, y consultar los niveles de hurto en el área metropolitana. Todas estas aplicaciones generan gráficos con Pandas. Además, incluye una aplicación usando la API de Gemini para comentar código y un generador de itinerarios de viaje.",
     link: "https://nt-panelcontrolasistencia-b9quzcpwvkqn4airqprcsl.streamlit.app/Proyecto_Integrador",
     github: "https://github.com/dannyedison75/NT-PanelControlAsistencia.git",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/streamlitapp.png?alt=media&token=8eb859da-d996-4530-83c6-5e860edadc4c",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/streamlitapp.png?alt=media&token=8eb859da-d996-4530-83c6-5e860edadc4c",
     tags: [TAGS.FIREBASE, TAGS.PYTHON],
   },
   {
@@ -128,7 +139,8 @@ const PROJECTS = [
       "Sitio web para administradores que deseen gestionar la nómina de sus empleados y sus respectivas liquidaciones.",
     link: "#",
     github: "https://github.com/ProyectoNomina24/login",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/softapp.png?alt=media&token=c4ffade3-0285-4a87-a09f-42391a29760d",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/softapp.png?alt=media&token=c4ffade3-0285-4a87-a09f-42391a29760d",
     tags: [TAGS.SQL, TAGS.PHP, TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
   {
@@ -136,96 +148,105 @@ const PROJECTS = [
     description:
       "Dashboard para gestionar recetas vegetarianas y no vegetarianas con imágenes almacenadas en Google Storage.",
     link: "#",
-      github2: "https://github.com/xeduark/recetixBackend",
+    github2: "https://github.com/xeduark/recetixBackend",
     github: "https://github.com/xeduark/recetixFrontend.git",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/Recetas.png?alt=media&token=22a36f97-2259-43f4-97c5-a6eb301cc598",
-      tags: [TAGS.EXPRESS, TAGS.REACT, TAGS.FIREBASE, TAGS.CSS],
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/Recetas.png?alt=media&token=22a36f97-2259-43f4-97c5-a6eb301cc598",
+    tags: [TAGS.EXPRESS, TAGS.REACT, TAGS.FIREBASE, TAGS.CSS],
   },
-    {
+  {
     title: "Asistify - Mobile",
     description:
       "Es una aplicación que permite al administrador gestionar y monitorear a los empleados en su versión móvil.",
-      github: "https://github.com/xeduark/panel-control-asistencia-empleados-movil",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/collageasistify.png?alt=media&token=d0e7d0e3-491e-4174-a50e-2da30529a2a3",
-        tags: [TAGS.FIREBASE, TAGS.JAVA]
+    github:
+      "https://github.com/xeduark/panel-control-asistencia-empleados-movil",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/collageasistify.png?alt=media&token=d0e7d0e3-491e-4174-a50e-2da30529a2a3",
+    tags: [TAGS.FIREBASE, TAGS.JAVA],
   },
-    {
+  {
     title: "My Nómina - Mobile",
     description:
       "Es una aplicación para calcular la nómina propia y de tus empleados, liquidaciones y gestionar gastos, en su versión móvil.",
-      github: "https://github.com/xeduark/My-Nomina-movil",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/collage2.png?alt=media&token=827c46f6-3bba-4317-b833-c34d0dd7aa8c",
-        tags: [TAGS.FIREBASE, TAGS.JAVA]
+    github: "https://github.com/xeduark/My-Nomina-movil",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/collage2.png?alt=media&token=827c46f6-3bba-4317-b833-c34d0dd7aa8c",
+    tags: [TAGS.FIREBASE, TAGS.JAVA],
   },
-    {
+  {
     title: "Calculadora",
     description:
       "Una calculadora clásica, muy útil para operaciones básicas con un diseño dinámico y modos de vista oscuro y claro.",
-        github: "https://github.com/xeduark/calculadoraWeb1",
+    github: "https://github.com/xeduark/calculadoraWeb1",
     link: "https://edwardcalcula.netlify.app/",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/CALCULADORA.png?alt=media&token=5e403ed8-b4f3-43cd-bace-5a7e709123cc",
-        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT]
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/CALCULADORA.png?alt=media&token=5e403ed8-b4f3-43cd-bace-5a7e709123cc",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github, github2 }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-        <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-            <img
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
-              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
-              src={image}
-            />
+    PROJECTS.map(
+      ({ image, title, description, tags, link, github, github2 }) => (
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+          <div class="w-full md:w-1/2">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img
+                alt="Recién llegado vs 5 años en Nueva Zelanda"
+                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                loading="lazy"
+                src={image}
+              />
+            </div>
           </div>
-        </div>
 
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}
-          </h3>
-          <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
-              {tags.map((tag) => (
-                <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                  >
-                    <tag.icon class="size-4" />
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              {title}
+            </h3>
+            <div class="flex flex-wrap mt-2">
+              <ul class="flex flex-row mb-2 gap-x-2">
+                {tags.map((tag) => (
+                  <li>
+                    <span
+                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    >
+                      <tag.icon class="size-4" />
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
 
-            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github2 && (
-                <LinkButton href={github2}>
-                  <GitHub2 class="size-6" />
-                  Back-End
-                </LinkButton>
-              )}
-              {github && (
-                <LinkButton href={github}>
-                  <GitHub class="size-6" />
-                   Front-End
-                </LinkButton>
-              )}
-              {link && (
-                <LinkButton href={link}>
-                  <Link class="size-4" />
-                  Preview
-                </LinkButton>
-              )}
-            </footer>
+              <div class="mt-2 text-gray-700 dark:text-gray-400">
+                {description}
+              </div>
+              <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {github2 && (
+                  <LinkButton href={github2}>
+                    <GitHub2 class="size-6" />
+                    Back-End
+                  </LinkButton>
+                )}
+                {github && (
+                  <LinkButton href={github}>
+                    <GitHub class="size-6" />
+                    Front-End
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
           </div>
-        </div>
-      </article>
-    ))
+        </article>
+      ),
+    )
   }
 </div>
