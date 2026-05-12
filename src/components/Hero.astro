@@ -1,19 +1,16 @@
 ---
-const personalImageAlt = "Miguel Ángel"
-import Badge from "@/components/Badge.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
-import SocialPill from "@/components/SocialPill.astro"
+const personalImageAlt = "Miguel Ángel";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import WhatsAppIcon from "@/components/icons/WhatsApp.astro";
 import styles from "../styles/estilos.module.css";
 ---
 
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
-    <img
-      class={styles.perfilImg}
-      src="/xeduark.jpg"
-      alt={personalImageAlt}
-    />
+    <img class={styles.perfilImg} src="/xeduark.jpg" alt={personalImageAlt} />
     <a
       href="https://www.linkedin.com/in/edward-munoz-643659310/"
       target="_blank"
@@ -23,25 +20,30 @@ import styles from "../styles/estilos.module.css";
       <Badge>Disponible para trabajar</Badge>
     </a>
   </div>
-  <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
-  Hola, soy &lt; Edward /&gt; 
-</h1>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hola, soy &lt; Edward /&gt;
+  </h1>
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
   >
     Más de un año de experiencia. <strong
       >Técnico laboral en desarrollo de software</strong
-    > de Neiva, Colombia. Especializado en el desarrollo de aplicativos web
-    únicos.
+    > de Neiva, Colombia. Especializado en el desarrollo de aplicativos web únicos.
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="xeduarkk@gmail.com">
+    <SocialPill href="mailto:xeduark@gmail.com">
       <MailIcon class="size-4" />
       Contáctame
     </SocialPill>
     <SocialPill href="https://www.linkedin.com/in/edward-munoz-643659310/">
       <LinkedInIcon class="size-4" />
       LinkedIn
+    </SocialPill>
+    <SocialPill href="https://wa.me/573003766780">
+      <WhatsAppIcon class="size-4" />
+      WhatsApp
     </SocialPill>
   </nav>
 </div>

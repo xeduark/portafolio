@@ -15,6 +15,7 @@ import Sql from "./icons/Sql.astro";
 import Php from "./icons/Php.astro";
 import Css from "./icons/Css.astro";
 import Java from "./icons/Java.astro";
+import Sheets from "./icons/Sheets.astro";
 import Bootstrap from "./icons/Bosstrap.astro";
 
 const TAGS = {
@@ -83,6 +84,11 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Java,
   },
+  SHEETS: {
+    name: "Google Sheets",
+    class: "bg-[#003159] text-white",
+    icon: Sheets,
+  },
 };
 const PROJECTS = [
   {
@@ -91,7 +97,7 @@ const PROJECTS = [
       "Aplicación web para la gestión, generación, firma y almacenamiento de actas de entrega de equipos del Comité de Estudios Médicos (CEM).",
     github: "https://github.com/xeduark/cemManagerBackend.git",
     github2: "https://github.com/xeduark/cemManagerFrontend.git",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/juan.png?alt=media&token=3906aff0-b716-4479-91aa-85640a226d34",
+    image: "https://res.cloudinary.com/decmvewpj/image/upload/v1778549921/Captura_de_pantalla_2026-04-06_160808_oeszh1.png",
     tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.EXPRESS],
   },
   {
@@ -100,7 +106,7 @@ const PROJECTS = [
       "Dashboard para gestionar propiedades, clientes, contratos y generar reportes de una inmobiliaria. Desarrollado con PHP y MySQL, este proyecto se centra en la eficiencia y facilidad de uso para los administradores inmobiliarios.",
     link: "https://somospropiedad.com/",
     github: "https://github.com/xeduark/ADMIN-SOMOS-PROPIEDAD.git",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/juan.png?alt=media&token=3906aff0-b716-4479-91aa-85640a226d34",
+    image: "https://res.cloudinary.com/decmvewpj/image/upload/v1778550130/Captura_de_pantalla_2026-05-11_204104_la632k.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.PHP],
   },
   {
@@ -108,7 +114,7 @@ const PROJECTS = [
     description:
       "Dashboard para gestionar proyectos, clientes, tareas y generar reportes de una empresa de desarrollo de software. Desarrollado con PHP y MySQL, este proyecto se centra en la eficiencia y facilidad de uso para los administradores de proyectos.",
     github: "https://github.com/xeduark/DASBOARD-ADMIN-MINTICS.git",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/juan.png?alt=media&token=3906aff0-b716-4479-91aa-85640a226d34",
+    image: "https://res.cloudinary.com/decmvewpj/image/upload/v1778553408/Captura_de_pantalla_2026-05-11_211952_a3zhfw.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.PHP],
   },
   {
@@ -116,7 +122,7 @@ const PROJECTS = [
     description:
       "Un trabajo sencillo en un sistema CMS (MgPanel) para un cliente que necesitaba una landing page para su negocio.",
     link: "https://juan-de-leon.mgpanel.org/",
-    image: "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/juan.png?alt=media&token=3906aff0-b716-4479-91aa-85640a226d34",
+    image: "https://res.cloudinary.com/decmvewpj/image/upload/v1778553534/Captura_de_pantalla_2026-05-11_213830_cqzygu.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
     github: "",
   },
@@ -137,7 +143,7 @@ const PROJECTS = [
     github2: "https://github.com/xeduark/backendAsistify",
     github: "https://github.com/xeduark/AppAsistify",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/homeAsistify.png?alt=media&token=0cad1b7d-52f3-47d8-a002-b378784d775a",
+      "https://res.cloudinary.com/decmvewpj/image/upload/v1778553887/Captura_de_pantalla_2026-05-11_214411_bwq5lh.png",
     tags: [TAGS.EXPRESS, TAGS.REACT, TAGS.FIREBASE, TAGS.BOOTSTRAP],
   },
   {
@@ -147,38 +153,36 @@ const PROJECTS = [
     link: "https://eyasoccer.netlify.app/",
     github: "https://github.com/xeduark/EyA_SAS.git",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/eyaLogin.png?alt=media&token=b98ba274-726f-4cd7-bf0e-a21ae4086d3a",
+      "https://res.cloudinary.com/decmvewpj/image/upload/v1778554212/Captura_de_pantalla_2026-05-11_214908_eavggc.png",
     tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT],
   },
   {
-    title: "App Streamlit",
+    title: "App Control logístico de equipos - CEM",
     description:
-      "Sitio web para gestionar y crear datos de empleados, consultar el nivel de estrés dependiendo del modo de trabajo, y consultar los niveles de hurto en el área metropolitana. Todas estas aplicaciones generan gráficos con Pandas. Además, incluye una aplicación usando la API de Gemini para comentar código y un generador de itinerarios de viaje.",
-    link: "https://nt-panelcontrolasistencia-b9quzcpwvkqn4airqprcsl.streamlit.app/Proyecto_Integrador",
-    github: "https://github.com/dannyedison75/NT-PanelControlAsistencia.git",
+      "Aplicación para gestionar el control logístico de equipos, permitiendo registrar, actualizar y monitorear el inventario de equipos.",
+    link: "https://control-log-stico-de-equipos-cemxfmkvqbbdstqhq9pkk8asy.streamlit.app/",
+    github: "https://github.com/xeduark/Control-Log-stico-de-Equipos.git",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/streamlitapp.png?alt=media&token=8eb859da-d996-4530-83c6-5e860edadc4c",
-    tags: [TAGS.FIREBASE, TAGS.PYTHON],
+      "https://res.cloudinary.com/decmvewpj/image/upload/v1778555934/Captura_de_pantalla_2026-05-11_220353_ckyemx.png",
+    tags: [TAGS.SHEETS, TAGS.PYTHON],
   },
   {
     title: "My Nómina",
     description:
       "Sitio web para administradores que deseen gestionar la nómina de sus empleados y sus respectivas liquidaciones.",
-    link: "#",
     github: "https://github.com/ProyectoNomina24/login",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/softapp.png?alt=media&token=c4ffade3-0285-4a87-a09f-42391a29760d",
+      "https://res.cloudinary.com/decmvewpj/image/upload/v1778559673/Captura_de_pantalla_2026-05-11_231841_e4rlnu.png",
     tags: [TAGS.SQL, TAGS.PHP, TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
   {
     title: "Fresh Food",
     description:
       "Dashboard para gestionar recetas vegetarianas y no vegetarianas con imágenes almacenadas en Google Storage.",
-    link: "#",
     github2: "https://github.com/xeduark/recetixBackend",
     github: "https://github.com/xeduark/recetixFrontend.git",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/images-e79d0.appspot.com/o/Recetas.png?alt=media&token=22a36f97-2259-43f4-97c5-a6eb301cc598",
+      "https://res.cloudinary.com/decmvewpj/image/upload/v1778560107/Captura_de_pantalla_2026-05-11_232603_x9lla9.png",
     tags: [TAGS.EXPRESS, TAGS.REACT, TAGS.FIREBASE, TAGS.CSS],
   },
   {
