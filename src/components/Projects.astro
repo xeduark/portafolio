@@ -17,6 +17,9 @@ import Css from "./icons/Css.astro";
 import Java from "./icons/Java.astro";
 import Sheets from "./icons/Sheets.astro";
 import Bootstrap from "./icons/Bosstrap.astro";
+import Atro from "./icons/Atro.astro";
+import Cloudinary from "./icons/Cloudinary.astro";
+import Typescript from "./icons/Typescript.astro";
 
 const TAGS = {
   NEXT: {
@@ -89,15 +92,41 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Sheets,
   },
+  ATRO: { name: "Astro",
+   class: "bg-[#003159] text-white", 
+   icon: Atro,
+   },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-black text-white",
+    icon: Typescript,
+  },
+  CLOUDINARY: {
+    name: "Cloudinary",
+    class: "bg-black text-white",
+    icon: Cloudinary,
+  },
 };
+
 const PROJECTS = [
+  {
+    title: "Club de patinaje Formax-J",
+    description:
+      "Portafolio web desarrollado con Astro, TypeScript, Tailwind CSS y Cloudinary.",
+    image:
+    "https://res.cloudinary.com/decmvewpj/image/upload/v1786131250/Captura_de_pantalla_2026-08-07_125241_e6bzew.png",
+    link: "https://formax-j.netlify.app/",
+    github: "https://github.com/xeduark/Formax-J",
+    tags: [TAGS.ATRO, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.CLOUDINARY],
+  },
   {
     title: "DASHBOARD - Admin - ACTAS",
     description:
       "Aplicación web para la gestión, generación, firma y almacenamiento de actas de entrega de equipos del Comité de Estudios Médicos (CEM).",
     github: "https://github.com/xeduark/cemManagerBackend.git",
     github2: "https://github.com/xeduark/cemManagerFrontend.git",
-    image: "https://res.cloudinary.com/decmvewpj/image/upload/v1778549921/Captura_de_pantalla_2026-04-06_160808_oeszh1.png",
+    image:
+      "https://res.cloudinary.com/decmvewpj/image/upload/v1778549921/Captura_de_pantalla_2026-04-06_160808_oeszh1.png",
     tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.EXPRESS],
   },
   {
@@ -106,7 +135,8 @@ const PROJECTS = [
       "Dashboard para gestionar propiedades, clientes, contratos y generar reportes de una inmobiliaria. Desarrollado con PHP y MySQL, este proyecto se centra en la eficiencia y facilidad de uso para los administradores inmobiliarios.",
     link: "https://somospropiedad.com/",
     github: "https://github.com/xeduark/ADMIN-SOMOS-PROPIEDAD.git",
-    image: "https://res.cloudinary.com/decmvewpj/image/upload/v1778550130/Captura_de_pantalla_2026-05-11_204104_la632k.png",
+    image:
+      "https://res.cloudinary.com/decmvewpj/image/upload/v1778550130/Captura_de_pantalla_2026-05-11_204104_la632k.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.PHP],
   },
   {
@@ -114,7 +144,8 @@ const PROJECTS = [
     description:
       "Dashboard para gestionar proyectos, clientes, tareas y generar reportes de una empresa de desarrollo de software. Desarrollado con PHP y MySQL, este proyecto se centra en la eficiencia y facilidad de uso para los administradores de proyectos.",
     github: "https://github.com/xeduark/DASBOARD-ADMIN-MINTICS.git",
-    image: "https://res.cloudinary.com/decmvewpj/image/upload/v1778553408/Captura_de_pantalla_2026-05-11_211952_a3zhfw.png",
+    image:
+      "https://res.cloudinary.com/decmvewpj/image/upload/v1778553408/Captura_de_pantalla_2026-05-11_211952_a3zhfw.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.PHP],
   },
   {
@@ -122,7 +153,8 @@ const PROJECTS = [
     description:
       "Un trabajo sencillo en un sistema CMS (MgPanel) para un cliente que necesitaba una landing page para su negocio.",
     link: "https://juan-de-leon.mgpanel.org/",
-    image: "https://res.cloudinary.com/decmvewpj/image/upload/v1778553534/Captura_de_pantalla_2026-05-11_213830_cqzygu.png",
+    image:
+      "https://res.cloudinary.com/decmvewpj/image/upload/v1778553534/Captura_de_pantalla_2026-05-11_213830_cqzygu.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
     github: "",
   },
